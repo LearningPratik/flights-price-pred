@@ -4,5 +4,5 @@ scikit-learn
 streamlit
 feature-engine
 xgboost
-pickle5
+pickle
 joblib
