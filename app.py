@@ -331,10 +331,10 @@ x_new = pd.DataFrame(dict(
 
 
 if st.button("Predict"):
-	saved_preprocessor = pickle.load(open("/home/pratik/Desktop/flight_price_sagemaker/models/preprocessor.pkl", 'rb'))
+	saved_preprocessor = pickle.load(open("preprocessor.pkl", 'rb'))
 	x_new_pre = saved_preprocessor.transform(x_new)
 
-	with open("/home/pratik/Desktop/flight_price_sagemaker/models/xgb_reg.pkl", "rb") as f:
+	with open("xgb_reg.pkl", "rb") as f:
 		model = pickle.load(f)
 	# x_new_xgb = xgb.DMatrix(x_new_pre)
 	pred = model.predict(x_new_pre)[0]
